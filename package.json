@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "cross-env": "^5.2.0",
-    "nuxt": "^2.4.0"
+    "fantastic-css": "^1.0.16",
+    "node-sass": "^4.12.0",
+    "nuxt": "^2.4.0",
+    "sass-loader": "^7.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
