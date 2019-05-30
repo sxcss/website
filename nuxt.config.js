@@ -27,7 +27,9 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/styles/main.scss'
+    '~/styles/main.scss',
+    'fantastic-css',
+    'fantastic-gutenberg'
   ],
 
   /*
@@ -40,12 +42,26 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    [
+      '@vue-wordpress/nuxt', {
+        config: {
+          url: 'https://wp.fantastic-css.com/',
+          lang: 'en',
+          menus: false,
+        },
+        router: 'manual',
+        store: 'manual'
+      }
+    ]
   ],
 
   /*
   ** Build configuration
   */
   build: {
+    transpile: [
+      '@vue-wordpress/core'
+    ],
     /*
     ** You can extend webpack config here
     */

@@ -1,6 +1,18 @@
 <template>
   <div class="page splash">
-    <section
+    <div
+      class="splash wp-page"
+    >
+      <div
+        class="splash__hero"
+      >
+        <Sections
+          v-if="wpData"
+          :data="wpData"
+        />
+      </div>
+    </div>
+    <!-- <section
       class="splash__hero"
     >
     <h1
@@ -19,17 +31,17 @@
     >
       Universal and scalable SCSS framework.
     </p>
-    </section>
+    </section> -->
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+
+import loadSections from '@vue-wordpress/core/mixins/loadSections'
+import { FetchHookTypes } from '@vue-wordpress/core/types'
 
 export default {
-  components: {
-    Logo
-  }
+  mixins: [loadSections('start', FetchHookTypes.AsyncData)]
 }
 </script>
 
