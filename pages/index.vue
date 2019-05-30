@@ -1,13 +1,24 @@
 <template>
-  <div class="page home">
+  <div class="page splash">
     <section
-      class="home__hero"
+      class="splash__hero"
     >
+    <h1
+      class="splash__hero__heading"
+    >
+      <span class="splash__hero__heading__title">Fantastic CSS</span>
       <img
-        src="/img/brand/splashLogo.svg"
+        src="/img/brand/fantastic-css-logo.png"
         alt="Fantastic CSS"
-        height="120px"
+        height="75px"
+        class="splash__hero__heading__image"
       >
+    </h1>
+    <p
+      class="splash__hero__subtitle"
+    >
+      Universal and scalable SCSS framework.
+    </p>
     </section>
   </div>
 </template>
@@ -26,15 +37,30 @@ export default {
 
 @import 'fantastic-css';
 
-.home {
+.splash {
 
   &__hero {
     @include min-height(100vh);
     @include grid;
     @include place-content(center);
+    @include text-align(center);
 
-    img {
+    &__heading {
       @include max-width(78vw);
+
+      &__title {
+        @include hide;
+      }
+
+      &__image {
+        @include object-fit(contain);
+      }
+    }
+
+    &__subtitle {
+      @include margin-top(map-get($size, xs));
+      @include font-size(calc(1.2 * #{map-get($size, xs)}));
+      @include opacity(.6);
     }
   }
 }

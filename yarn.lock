@@ -3119,10 +3119,13 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
-fantastic-css@^1.0.16:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/fantastic-css/-/fantastic-css-1.0.16.tgz#10bca116d787124b9b5a0a21903d70f03edaabe1"
-  integrity sha512-xGVQpfG+/dcZwYGGcx+KrKHLVzq3zd/8iCJsd8ia8N9fH+VOD/+Qj//S61We1CGHY+BhfcTNuCaxbpp9y1KuPA==
+fantastic-css@^1.0.22:
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/fantastic-css/-/fantastic-css-1.0.22.tgz#a881981f79cf69e95a8676ecd2088e685f632aa0"
+  integrity sha512-DyZFQdh6LfYpF+Qz9X+E9Aapn6kMHOC3w5LF0Re4Pzwp6BjQMGX+ize1EBfly+sr9l4p3amD81d5LlIcfAWwfQ==
+  dependencies:
+    node-sass "^4.12.0"
+    sass-loader "^7.1.0"
 
 fast-deep-equal@^2.0.1:
   version "2.0.1"
