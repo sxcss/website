@@ -37,7 +37,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/vue-particles' }
+    { src: '~/plugins/vue-particles', ssr: false }
   ],
 
   /*

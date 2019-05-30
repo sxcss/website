@@ -5,23 +5,16 @@
     <div
       class="splash__hero"
     >
+      <!-- <no-ssr> -->
       <vue-particles
         color="#dedede"
         :particleOpacity="0.5"
         :particlesNumber="45"
-        shapeType="circle"
-        :particleSize="6"
         linesColor="#dedede"
-        :linesWidth="1"
-        :lineLinked="true"
         :lineOpacity="0.5"
-        :linesDistance="150"
         :moveSpeed="1"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
       />
+      <!-- </no-ssr> -->
       <Sections
         v-if="wpData"
         :data="wpData"
@@ -34,8 +27,12 @@
 
 import loadSections from '@vue-wordpress/core/mixins/loadSections'
 import { FetchHookTypes } from '@vue-wordpress/core/types'
+// import VueParticles from 'vue-particles'
 
 export default {
+  // components: {
+  //   VueParticles
+  // },
   mixins: [loadSections('start', FetchHookTypes.AsyncData)]
 }
 </script>

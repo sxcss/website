@@ -8,13 +8,13 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "server:start": "pm2 start npm --name fantastic-css-website -- start",
+    "server:start": "yarn build && pm2 start npm --name fantastic-css-website -- start && yarn generate",
     "generate": "nuxt generate"
   },
   "dependencies": {
     "@vue-wordpress/nuxt": "^1.0.6",
     "cross-env": "^5.2.0",
-    "fantastic-css": "^1.0.26",
+    "fantastic-css": "^1.0.28",
     "fantastic-gutenberg": "^1.0.6",
     "node-sass": "^4.12.0",
     "nuxt": "^2.4.0",
