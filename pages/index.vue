@@ -1,16 +1,14 @@
 <template>
-  <div class="page splash">
+  <div
+    class="splash wp-page"
+  >
     <div
-      class="splash wp-page"
+      class="splash__hero"
     >
-      <div
-        class="splash__hero"
-      >
-        <Sections
-          v-if="wpData"
-          :data="wpData"
-        />
-      </div>
+      <Sections
+        v-if="wpData"
+        :data="wpData"
+      />
     </div>
   </div>
 </template>
@@ -32,13 +30,16 @@ export default {
 .splash {
 
   &__hero {
-    @include min-height(100vh);
+    @include width(100vw);
+    // @include min-height(100vh);
+    min-height: 100vh;
+    @include padding-y(map-get($size, lg));
     @include grid;
     @include place-content(center);
     @include text-align(center);
 
     &__heading {
-      @include max-width(78vw);
+      @include margin-top(map-get($gap, md));
 
       &__title {
         @include hide;
@@ -54,6 +55,16 @@ export default {
       @include font-size(calc(1.2 * #{map-get($size, xs)}));
       @include opacity(.6);
     }
+  }
+
+  h2 {
+    @include font-size(2rem);
+  }
+
+  p {
+    @include font-weight(map-get($font-weight, medium));
+    @include margin(auto);
+    max-width: 70rem;
   }
 }
 

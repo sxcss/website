@@ -14,7 +14,8 @@ export default {
       { hid: 'description', name: 'description', content: '🎮 Universal, scalable and 100% customizable SCSS framework built for rapid & organized UI development 🛠' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/img/brand/fantastic-css-mark.png' }
+      { rel: 'icon', type: 'image/png', href: '/img/brand/fantastic-css-mark.png' },
+      { rel: 'https://use.typekit.net/whb1loi.css', type: 'text/css', href: 'https://use.typekit.net/whb1loi.css' }
     ]
   },
 
