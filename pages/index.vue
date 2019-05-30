@@ -12,26 +12,6 @@
         />
       </div>
     </div>
-    <!-- <section
-      class="splash__hero"
-    >
-    <h1
-      class="splash__hero__heading"
-    >
-      <span class="splash__hero__heading__title">Fantastic CSS</span>
-      <img
-        src="/img/brand/fantastic-css-logo.png"
-        alt="Fantastic CSS"
-        height="75px"
-        class="splash__hero__heading__image"
-      >
-    </h1>
-    <p
-      class="splash__hero__subtitle"
-    >
-      Universal and scalable SCSS framework.
-    </p>
-    </section> -->
   </div>
 </template>
 

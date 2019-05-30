@@ -11,10 +11,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '🎮 Universal, scalable and 100% customizable SCSS framework built for rapid UI development 🛠' }
+      { hid: 'description', name: 'description', content: '🎮 Universal, scalable and 100% customizable SCSS framework built for rapid & organized UI development 🛠' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/png', href: '/img/brand/fantastic-css-mark.png' }
     ]
   },
 
