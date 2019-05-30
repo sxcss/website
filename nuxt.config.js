@@ -37,7 +37,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~/plugins/vue-particles', ssr: false }
+    { src: '~/plugins/vue-particles' }
   ],
 
   /*
@@ -62,7 +62,8 @@ export default {
   */
   build: {
     transpile: [
-      '@vue-wordpress/core'
+      '@vue-wordpress/core',
+      'vue-particles'
     ],
     /*
     ** You can extend webpack config here
