@@ -5,6 +5,23 @@
     <div
       class="splash__hero"
     >
+      <vue-particles
+        color="#dedede"
+        :particleOpacity="0.5"
+        :particlesNumber="45"
+        shapeType="circle"
+        :particleSize="6"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.5"
+        :linesDistance="150"
+        :moveSpeed="1"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      />
       <Sections
         v-if="wpData"
         :data="wpData"
@@ -31,6 +48,13 @@ export default {
   @include padding-y(map-get($size, lg));
 
   .splash__hero {
+    #particles-js {
+      @include position(fixed, 50%, unset, unset, 50%);
+      transform: translate(-50%, -50%);
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+    }
     .container {
       @include boxed($boxed-max-width: 1080px);
 
