@@ -3207,6 +3207,14 @@ fantastic-css@^1.0.22:
     node-sass "^4.12.0"
     sass-loader "^7.1.0"
 
+fantastic-css@^1.0.25:
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/fantastic-css/-/fantastic-css-1.0.25.tgz#465f6adee63e72d18ea9d22150c5078b7d0f298a"
+  integrity sha512-6v7JziMXf6KiSx3RgIHUrbKqniJ68kz+kiaFMJX2+9MOHDqaS/Q9YoONhdp307HRUEC8HmabaMBG9HqdFofg9Q==
+  dependencies:
+    node-sass "^4.12.0"
+    sass-loader "^7.1.0"
+
 fantastic-gutenberg@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/fantastic-gutenberg/-/fantastic-gutenberg-1.0.6.tgz#dd9dc6f328c8a7b5a192ee6e54adb93f7224ce59"

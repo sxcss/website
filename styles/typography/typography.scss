@@ -21,10 +21,10 @@ code, pre {
   @include color(#ccc);
   @include font-family(#{Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace} !important);
   @include text-align(left);
-// @include white-space: pre;
-// @include word-spacing: normal;
-// @include word-break: normal;
-// @include word-wrap: normal;
+  white-space: pre-wrap;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
   -moz-tab-size: 2;
   -o-tab-size: 2;
   tab-size: 2;

@@ -28,43 +28,35 @@ export default {
 @import 'fantastic-css';
 
 .splash {
+  @include padding-y(map-get($size, lg));
 
-  &__hero {
-    @include width(100vw);
-    // @include min-height(100vh);
-    min-height: 100vh;
-    @include padding-y(map-get($size, lg));
-    @include grid;
-    @include place-content(center);
-    @include text-align(center);
+  .splash__hero {
+    .container {
+      @include boxed($boxed-max-width: 1080px);
 
-    &__heading {
-      @include margin-top(map-get($gap, md));
+      &__inner {
 
-      &__title {
-        @include hide;
-      }
+        .column {
 
-      &__image {
-        @include object-fit(contain);
+          > div {
+
+            .content {
+              @include grid-layout($grid-cols: 1, $grid-fr: 1fr);
+            }
+
+            h2 {
+              @include font-size(2rem);
+            }
+
+            p {
+              @include font-weight(map-get($font-weight, medium));
+              @include margin(auto);
+              max-width: 70rem;
+            }
+          }
+        }
       }
     }
-
-    &__subtitle {
-      @include margin-top(map-get($size, xs));
-      @include font-size(calc(1.2 * #{map-get($size, xs)}));
-      @include opacity(.6);
-    }
-  }
-
-  h2 {
-    @include font-size(2rem);
-  }
-
-  p {
-    @include font-weight(map-get($font-weight, medium));
-    @include margin(auto);
-    max-width: 70rem;
   }
 }
 
