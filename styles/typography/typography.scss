@@ -56,8 +56,8 @@ h1 {
 }
 
 h2 {
-  @include font-size(36px);
-  @include font-weight(map-get($font-weight, semibold));
+  @include font-size(42px);
+  @include font-weight(map-get($font-weight, semibold) !important);
   @include line-height(1.5);
 }
 

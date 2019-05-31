@@ -66,13 +66,29 @@ export default {
             }
 
             h2 {
-              @include font-size(2rem);
+              @include font-size(2.7rem);
             }
 
-            p {
+            p, li {
               @include font-weight(map-get($font-weight, medium));
               @include margin(auto);
-              max-width: 70rem;
+              @include max-width(70rem);
+              @include margin(auto);
+              code {
+                background: #f0f0f0;
+                padding: .3rem;
+                color: red;
+              }
+            }
+
+            ol {
+              @include margin-x(auto !important);
+              > li {
+                @include margin-y(map-get($gaps, xs));
+              }
+              ol {
+                @include padding-x(map-get($gaps, md) !important);
+              }
             }
           }
         }
