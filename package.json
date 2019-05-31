@@ -12,6 +12,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.2.0",
     "@vue-wordpress/nuxt": "^1.0.6",
     "cross-env": "^5.2.0",
     "fantastic-css": "^1.0.28",

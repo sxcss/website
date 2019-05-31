@@ -54,6 +54,11 @@ export default {
         router: 'manual',
         store: 'manual'
       }
+    ],
+    [
+      '@nuxtjs/google-analytics', {
+        id: 'UA-140885563-2'
+      }
     ]
   ],
 
