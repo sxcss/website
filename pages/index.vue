@@ -1,11 +1,8 @@
 <template>
   <div
-    class="splash wp-page"
+    class="start wp-page"
   >
-    <div
-      class="splash__hero"
-    >
-      <!-- <no-ssr> -->
+    <no-ssr>
       <vue-particles
         color="#dedede"
         :particleOpacity="0.5"
@@ -14,12 +11,11 @@
         :lineOpacity="0.5"
         :moveSpeed="1"
       />
-      <!-- </no-ssr> -->
-      <Sections
-        v-if="wpData"
-        :data="wpData"
-      />
-    </div>
+    </no-ssr>
+    <Sections
+      v-if="wpData"
+      :data="wpData"
+    />
   </div>
 </template>
 
@@ -27,12 +23,12 @@
 
 import loadSections from '@vue-wordpress/core/mixins/loadSections'
 import { FetchHookTypes } from '@vue-wordpress/core/types'
-// import VueParticles from 'vue-particles'
+import VueParticles from 'vue-particles'
 
 export default {
-  // components: {
-  //   VueParticles
-  // },
+  components: {
+    VueParticles
+  },
   mixins: [loadSections('start', FetchHookTypes.AsyncData)]
 }
 </script>
@@ -40,55 +36,61 @@ export default {
 <style lang="scss">
 
 @import 'fantastic-css';
+@import 'styles/theme/main.scss';
 
-.splash {
+.start {
   @include padding-y(map-get($size, lg));
 
-  .splash__hero {
-    #particles-js {
-      @include position(fixed, 50%, unset, unset, 50%);
-      transform: translate(-50%, -50%);
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-    }
-    .container {
-      @include boxed($boxed-max-width: 1080px);
+  #particles-js {
+    @include position(fixed, 50%, unset, unset, 50%);
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  .container {
+    @include boxed($boxed-max-width: 1080px);
 
-      &__inner {
+    &__inner {
 
-        .column {
+      .column {
 
-          > div {
+        > div {
 
-            .content {
-              @include grid-layout($grid-cols: 1, $grid-fr: 1fr);
+          .content {
+            @include grid-layout($grid-cols: 1, $grid-fr: 1fr);
+          }
+
+          h2 {
+            @include font-size(2.7rem);
+            &::after {
+              content: '';
+              @include position(absolute);
+              @include width(100%);
+              @include height(map-get($size, xs));
+              @include border-color(map-get($theme-colors, fantastic-violet));
             }
+          }
 
-            h2 {
-              @include font-size(2.7rem);
+          p, li {
+            @include font-weight(map-get($font-weight, medium));
+            @include margin(auto);
+            @include max-width(70rem);
+            @include margin(auto);
+            code {
+              background: #f0f0f0;
+              padding: .3rem;
+              color: red;
             }
+          }
 
-            p, li {
-              @include font-weight(map-get($font-weight, medium));
-              @include margin(auto);
-              @include max-width(70rem);
-              @include margin(auto);
-              code {
-                background: #f0f0f0;
-                padding: .3rem;
-                color: red;
-              }
+          ol {
+            @include margin-x(auto !important);
+            > li {
+              @include margin-y(map-get($gaps, xs));
             }
-
             ol {
-              @include margin-x(auto !important);
-              > li {
-                @include margin-y(map-get($gaps, xs));
-              }
-              ol {
-                @include padding-x(map-get($gaps, md) !important);
-              }
+              @include padding-x(map-get($gaps, md) !important);
             }
           }
         }

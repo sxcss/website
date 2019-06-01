@@ -28,7 +28,7 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/styles/main.scss',
+    '~/styles/theme/main.scss',
     'fantastic-css',
     'fantastic-gutenberg'
   ],
