@@ -13,15 +13,15 @@
       />
     </no-ssr>
     <Sections
-      v-if="wpData"
-      :data="wpData"
+      v-if="start"
+      :data="start"
     />
   </div>
 </template>
 
 <script>
 
-import loadSections from '@vue-wordpress/core/mixins/loadSections'
+import wpData from '@vue-wordpress/core/mixins/wpData'
 import { FetchHookTypes } from '@vue-wordpress/core/types'
 import VueParticles from 'vue-particles'
 
@@ -29,17 +29,18 @@ export default {
   components: {
     VueParticles
   },
-  mixins: [loadSections('start', FetchHookTypes.AsyncData)]
+  mixins: [wpData('start', FetchHookTypes.AsyncData)]
 }
 </script>
 
 <style lang="scss">
 
-@import 'fantastic-css';
-@import 'styles/theme/main.scss';
+@import 'sxcss';
+@import '@sxcss/gutenberg/index.scss';
+// @import 'styles/theme/main.scss';
 
 .start {
-  @include padding-y(map-get($size, lg));
+  @include padding-y(map-deep-get($scale, proportion, lg));
 
   #particles-js {
     @include position(fixed, 50%, unset, unset, 50%);
@@ -49,7 +50,7 @@ export default {
     z-index: -1;
   }
   .container {
-    @include boxed($boxed-max-width: 1080px);
+    @include boxed($max-width: 1080px);
 
     &__inner {
 
@@ -58,7 +59,7 @@ export default {
         > div {
 
           .content {
-            @include grid-layout($grid-cols: 1, $grid-fr: 1fr);
+            @include grid-layout($grid-cols: 1, $grid-cols-fr: 1fr);
           }
 
           h2 {
@@ -67,13 +68,13 @@ export default {
               content: '';
               @include position(absolute);
               @include width(100%);
-              @include height(map-get($size, xs));
-              @include border-color(map-get($theme-colors, fantastic-violet));
+              @include height(map-deep-get($scale, proportion, xs));
+              // @include border-color(map-get($theme-colors, fantastic-violet));
             }
           }
 
           p, li {
-            @include font-weight(map-get($font-weight, medium));
+            @include font-weight(map-deep-get($font, weight, medium));
             @include margin(auto);
             @include max-width(70rem);
             @include margin(auto);
@@ -87,10 +88,10 @@ export default {
           ol {
             @include margin-x(auto !important);
             > li {
-              @include margin-y(map-get($gaps, xs));
+              @include margin-y(map-deep-get($scale, proportion, xs));
             }
             ol {
-              @include padding-x(map-get($gaps, md) !important);
+              @include padding-x(map-deep-get($scale, proportion, md) !important);
             }
           }
         }

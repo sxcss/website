@@ -28,9 +28,7 @@ export default {
   ** Global CSS
   */
   css: [
-    '~/styles/theme/main.scss',
-    'fantastic-css',
-    'fantastic-gutenberg'
+    '~/styles/theme/main.scss'
   ],
 
   /*
@@ -46,13 +44,11 @@ export default {
   modules: [
     [
       '@vue-wordpress/nuxt', {
-        config: {
-          url: 'https://wp.fantastic-css.com/',
-          lang: 'en',
-          menus: false,
-        },
-        router: 'manual',
-        store: 'manual'
+        url: 'https://wp.sxcss.io/',
+        lang: 'en',
+        menus: false,
+        router: true,
+        store: true
       }
     ],
     [
