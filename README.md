@@ -1,6 +1,6 @@
-# fantastic-css-website
+# sxcss-website
 
-> Nuxt.js app for Fantastic CSS Website
+> Nuxt.js + Vue WordPress app for SXCSS Website.
 
 ## Build Setup
 
@@ -19,4 +19,3 @@ $ yarn start
 $ yarn run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).

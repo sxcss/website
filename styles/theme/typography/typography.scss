@@ -1,0 +1,91 @@
+@import url("https://use.typekit.net/whb1loi.css");
+@import 'sxcss';
+
+* {
+  font-family: "neue-haas-unica", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+pre {
+  @include padding(1.5rem 1.5rem !important);
+}
+code, pre {
+  // @include justify-self(center);
+  // @include boxed($boxed-max-width: 60rem);
+  @include line-height(1.5 !important);
+  @include margin(.85rem auto !important);
+  @include background-color(#282c34);
+  @include border-radius(6px);
+  // @include overflow(auto);
+  @include color(#ccc);
+  @include font-family(#{Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace} !important);
+  @include text-align(left);
+  white-space: pre-wrap;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  -moz-tab-size: 2;
+  -o-tab-size: 2;
+  tab-size: 2;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  &.bash-code {
+    &::before {
+      content: '$ ';
+    }
+  }
+}
+
+body {
+  @media all and (min-width: 981px) {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  @media all and (max-width: 980px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h2 {
+  @include font-size(42px);
+  @include font-weight(map-deep-get($font, weight, semibold) !important);
+  @include line-height(1.5);
+}
+
+h3 {
+  @include font-size(24px);
+  @include font-weight(map-deep-get($font, weight, semibold));
+  @include line-height(1.5);
+}
+
+h4 {
+  @include font-size(21px);
+  @include font-weight(map-deep-get($font, weight, medium));
+}
+
+h5 {
+  @include font-size(18px);
+  @include font-weight(map-deep-get($font, weight, bold));
+}
+
+a {
+  @include color(inherit);
+}
+
+p {
+  @include margin-bottom(0 !important);
+
+  a {
+    @include font-weight(map-deep-get($font, weight, bold));
+  }
+}
