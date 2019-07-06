@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.2.0",
-    "@sxcss/gutenberg": "^1.0.3",
+    "@sxcss/gutenberg": "^1.0.4",
     "@vue-wordpress/nuxt": "^1.0.11",
     "cross-env": "^5.2.0",
     "node-sass": "^4.12.0",

@@ -1045,14 +1045,14 @@
     eventemitter2 "^4.1.0"
     ws "^3.0.0"
 
-"@sxcss/gutenberg@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@sxcss/gutenberg/-/gutenberg-1.0.3.tgz#c838a898752bbd1a98571489bd1735750bb89452"
-  integrity sha512-ABzjYUk51WqUqyVoC7XdUHYVFRG1w6XfbXaUx7Ex//214wZ+rdqtj3P9tMP6Oh74/5OnhIDEhWnmfuVi/kCO9A==
+"@sxcss/gutenberg@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@sxcss/gutenberg/-/gutenberg-1.0.4.tgz#8eaf0542ec34841747eef25db890190fb734438d"
+  integrity sha512-MjrZ6OfUHifGLXZz1N41ohqVKyCm3lcqu46fSmgol5JP+1GssCh765vSwos0vHxHEci7uQfpA4rC7dGuDxhRBA==
   dependencies:
     node-sass "^4.12.0"
     sass-loader "^7.1.0"
-    sxcss "^1.0.38"
+    sxcss "^1.0.39"
 
 "@types/node@^8.0.7":
   version "8.10.50"
@@ -8065,10 +8065,10 @@ svgo@^1.0.0:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-sxcss@^1.0.38:
-  version "1.0.38"
-  resolved "https://registry.yarnpkg.com/sxcss/-/sxcss-1.0.38.tgz#d85ff89421d3a520274523179a30d6869c3b1c8b"
-  integrity sha512-UYqLPiE1HFBnlcf5w/rmCq2lkA9Mdz5wKjNvJf0+T0AFMHlZjbWejywESEnJuT7Us10xRs+rEAypFhaHUpeBtw==
+sxcss@^1.0.39:
+  version "1.0.39"
+  resolved "https://registry.yarnpkg.com/sxcss/-/sxcss-1.0.39.tgz#73a9323bd37794a4f9c7067a6a2d291e57655271"
+  integrity sha512-VPXL1dOno/v8lb+3XDGysOGb6C7PFCHeP0pmG5OlZkDLU9wvezOEq+f+gdNfXdUwHs1LyXEYHlOo8u9V6LyyiA==
   dependencies:
     node-sass "^4.12.0"
     sass-loader "^7.1.0"
