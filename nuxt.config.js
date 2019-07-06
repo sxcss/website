@@ -11,7 +11,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '🎮 Universal, scalable and 100% customizable SCSS framework built for rapid & organized UI development 🛠' }
+      { hid: 'description', name: 'description', content: '🎮 Universal, scalable and 100% customizable SCSS framework built for rapid & organized UI development 🛠' },
+      { name: 'google-site-verification', content: '4ZpQ0oM9kNdTAPLI6LZgyKOdLjc1Y_35Jp9Yrj3BNQQ' }
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: '/img/brand/fantastic-css-mark.png' },

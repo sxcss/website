@@ -8,7 +8,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "server:start": "pm2 kill && yarn install && yarn build && pm2 start npm --name fantastic-css-website -- start",
+    "server:start": "pm2 kill && yarn install && yarn build && pm2 start npm --name website -- start",
     "generate": "nuxt generate"
   },
   "dependencies": {
